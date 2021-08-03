@@ -33,8 +33,6 @@ $(() => {
     data.list.slice(0, 3).forEach((item) => {
       console.log(item);
       date = item.dt_txt.split(" ")
-      console.log(date);
-      console.log(cityName);
       div += `
         <div class="box">
             <p class="date">${date[0]}</p>
@@ -45,4 +43,4 @@ $(() => {
     })
     $(".info").html(div)
   }
-}
+})
