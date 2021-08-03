@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background:aliceblue;
+  color: #181818;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info{
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section{
+  height: 100%;
+}
+
+.box{
+  padding: 10px;
+  background: rgba(217, 218, 218, 0.411);
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  box-shadow: 2px 2px 2px rgba(52, 68, 68, .7);
+  margin: 20px;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: row;
+}
+
+.box p{
+  padding: 10px;
+}
+
+.input{
+  background: #33364D;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.data{
+  text-align: center;
+  height: 70vh;
+  background:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("./img/sun-rays.png") center/cover no-repeat;
+}
+
+.main{
+  color: #fff;
+  position: relative;
+  text-align: center;
+  font-size: 2.2rem;
+  padding: 40px;
+}
+
+.title{
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 20px;
+}
+
+.form{
+  margin: auto;
+  width: 600px;
+  display: flex;
+  padding: 20px;
+}
+
+.form > *{
+  padding: 10px;
+  border: 1px solid #1c1c22;
+}
+
+.form input{
+  flex: 1;
+  outline: none;
+}
+
+.form button{
+  font-weight: bold;
+  transition: .1s ease-in-out;
+  cursor: pointer;
+}
+
+.form button:hover{
+  background: #1c1c22;
+  color: #fff;
+}
+
+.temp{
+  font-size: 2rem;
+}
+
+.loading{
+  font-size: 4rem;
+  height: 100%;
+}
+
+@media (max-width:768px) {
+  .info{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .data{
+    min-height: 70vh;
+    height: 100%;
+  }
+
+}
+
+@media (max-width:630px) {
+  .form{
+    width: 100%;
+  }
+}
