@@ -10,7 +10,6 @@ $(() => {
   })
 
   const prepareData = (unit, unitMeasure) => {
-    console.log(1);
     let cityName = $(".text").val().trim()
     const API_KEY = "c933bac99e074c3df1427010c63af3ef"
     const url = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=${unit}`
