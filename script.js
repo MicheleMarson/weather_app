@@ -30,7 +30,6 @@ $(() => {
     let date
     $(".title").html(html)
     data.list.slice(0, 3).forEach((item) => {
-      console.log(item);
       date = item.dt_txt.split(" ")
       div += `
         <div class="box">
