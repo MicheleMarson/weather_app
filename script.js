@@ -12,7 +12,7 @@ $(() => {
   const prepareData = (unit, unitMeasure) => {
     let cityName = $(".text").val().trim()
     const API_KEY = "c933bac99e074c3df1427010c63af3ef"
-    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=${unit}`
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=${unit}`
     if(cityName && cityName != ""){
       $.getJSON(url, (data) => {
         fetchData(data, unitMeasure)
@@ -32,7 +32,6 @@ $(() => {
     let date
     $(".title").html(html)
     data.list.slice(0, 3).forEach((item) => {
-      console.log(item);
       date = item.dt_txt.split(" ")
       div += `
         <div class="box">
