@@ -32,10 +32,11 @@ $(() => {
     let date
     $(".title").html(html)
     data.list.slice(0, 3).forEach((item) => {
-      date = item.dt_txt.split(" ")
+      date = item.dt_txt.split(" ")[1].split(":")
+      console.log(item);
       div += `
         <div class="box">
-          <p class="time">${date[1]}</p>
+          <p class="time">${date[0] + ":" + date[1]}</p>
           <img class="img" src="http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" />
           <p class="temp">${Math.round(item.main.temp) + " " + unitMeasure}</p>
         </div>
