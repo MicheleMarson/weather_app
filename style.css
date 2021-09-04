@@ -133,6 +133,10 @@ section{
     width: 100%;
   }
 
+  .input{
+    height: auto;
+  }
+
   .box{
     height: 300px;
     width: 300px;
