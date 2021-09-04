@@ -2,15 +2,14 @@ $(() => {
   $(".info").html("<p class='loading'>. . . . </p>")
 
   $(".btn-i").click(() => {
-    prepareData("imperial", "F°")
+    prepareData("imperial", "°F")
   })
 
   $(".btn-m").click(() => {
-    prepareData("metric", "C°")
+    prepareData("metric", "°C")
   })
 
   const prepareData = (unit, unitMeasure) => {
-    console.log(1);
     let cityName = $(".text").val().trim()
     const API_KEY = "c933bac99e074c3df1427010c63af3ef"
     const url = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=${unit}`
@@ -22,6 +21,8 @@ $(() => {
       alert("Please enter city name")
     }
   }
+
+  //weather[0] "icon":"04d"
 
   function fetchData(data, unitMeasure){
     let cityName = data.city.name
@@ -35,9 +36,9 @@ $(() => {
       date = item.dt_txt.split(" ")
       div += `
         <div class="box">
-            <p class="date">${date[0]}</p>
-            <p class="temp">${Math.round(item.main.temp) + " " + unitMeasure}</p>
-            <p class="time">${date[1]}</p>
+          <p class="time">${date[1]}</p>
+          <img class="img" src="http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" />
+          <p class="temp">${Math.round(item.main.temp) + " " + unitMeasure}</p>
         </div>
       `
     })

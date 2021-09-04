@@ -12,6 +12,7 @@ body{
 
 .info{
   padding: 20px;
+  display: grid;
   display: flex;
   justify-content: space-evenly;
 }
@@ -28,9 +29,9 @@ section{
   width: 300px;
   box-shadow: 2px 2px 2px rgba(52, 68, 68, .7);
   margin: 20px;
-  display: grid;
-  align-items: center;
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .box p{
@@ -94,12 +95,17 @@ section{
 }
 
 .temp{
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .loading{
   font-size: 4rem;
   height: 100%;
+}
+
+.box img{
+  width: 100px;
+  align-self: center;
 }
 
 @media (max-width:768px) {
@@ -115,8 +121,20 @@ section{
 
 }
 
+@media (max-width:1035px) {
+  .box{
+    height: 250px;
+    width: 250px;
+  }
+}
+
 @media (max-width:630px) {
   .form{
     width: 100%;
+  }
+
+  .box{
+    height: 300px;
+    width: 300px;
   }
 }
